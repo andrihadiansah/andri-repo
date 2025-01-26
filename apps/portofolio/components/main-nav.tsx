@@ -15,12 +15,15 @@ function NavWrapper({
   const pathname = usePathname();
   return (
     <nav
-      className={cn("border-grid border-y z-40 sticky", className)}
+      className={cn(
+        "border-grid container-wrapper border-y z-40 sticky",
+        className
+      )}
       {...props}
     >
       <div
         className=" px-8 max-md:px-4 pt-2
-      backdrop-blur-md"
+        backdrop:blur-md"
       >
         {children}
       </div>
