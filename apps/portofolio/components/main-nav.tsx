@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@workspace/ui/lib/utils";
-import { Button } from "@workspace/ui/components/button";
+import { buttonVariants } from "@workspace/ui/components/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -22,8 +22,8 @@ function NavWrapper({
       {...props}
     >
       <div
-        className=" px-8 max-md:px-4 pt-2
-        backdrop:blur-md"
+        className="px-8 max-md:px-4 pt-2
+        backdrop-blur-xs"
       >
         {children}
       </div>
@@ -51,19 +51,24 @@ function NavLinks({
   const pathname = usePathname();
   return (
     <ScrollArea>
-      <div className="w-full flex gap-2">
+      <div className={cn("w-full flex flex-row gap-2", { ...props })}>
         {links
           .filter((link) => link.href !== "/" || pathname !== "/")
           .map((link) => (
-            <Link key={link.href} href={link.href} className="w-full">
-              <Button
-                size="sm"
-                variant={pathname === link.href ? "default" : "secondary"}
-                withIcon={link.icon}
-                className="flex w-full"
-              >
-                {link.label}
-              </Button>
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                buttonVariants({
+                  size: "sm",
+                  variant: pathname === link.href ? "default" : "secondary",
+                }),
+                  "w-full",
+                  { ...props }
+              )}
+            >
+              {link.icon}
+              {link.label}
             </Link>
           ))}
       </div>

@@ -6,7 +6,8 @@ export default function SiteHeader() {
       <nav
         className="container-wrapper h-16
       flex items-center justify-between
-      px-8 max-md:px-4 backdrop-blur-md"
+      px-8 max-md:px-4 backdrop-blur-md
+      gap-2"
       >
         <Link href={"/"} className="flex items-center gap-4">
           <Icons.gitHub className="h-8 w-8" />

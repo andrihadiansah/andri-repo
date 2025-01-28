@@ -74,12 +74,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${fontSans.variable} ${fontMono.variable} font-mono antialiased `}
+        className={`${fontSans.variable} ${fontMono.variable} min-h-screen font-mono antialiased `}
       >
         <Providers>
-          <div className="relative flex min-h-screen flex-col bg-background">
-            {children}
-          </div>
+          <div className="relative flex flex-col flex-1">{children}</div>
         </Providers>
       </body>
     </html>

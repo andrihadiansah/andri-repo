@@ -34,7 +34,7 @@ const components = {
   h1: (props: ChildrenProps) => (
     <Heading
       level={1}
-      className="text-4xl font-extrabold tracking-tight lg:text-5xl"
+      className="text-4xl font-bold tracking-tight"
       {...props}
     />
   ),

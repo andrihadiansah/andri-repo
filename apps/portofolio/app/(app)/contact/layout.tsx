@@ -8,21 +8,20 @@ import {
   PageActions,
 } from "@workspace/ui/components/page-header";
 import Link from "next/link";
-import { buttonVariants } from "@workspace/ui/components/button";
-import { CalendarPlus, MessageCircle, Phone } from "lucide-react";
+import { Button, buttonVariants } from "@workspace/ui/components/button";
+import { MessageCircle } from "lucide-react";
 import { cn } from "@workspace/ui/lib/utils";
-import { Ping } from "@workspace/ui/components/ping";
 
 export const metadata: Metadata = {
-  title: "Who I Am",
-  description: "Learn about my journey, experiences, and what drives me.",
+  title: "Contact",
+  description: "Feel free to reach out to me for collaborations or inquiries.",
 };
 
 interface AppLayoutProps {
   children: React.ReactNode;
 }
 
-export default function AboutLayout({ children }: AppLayoutProps) {
+export default function ContactLayout({ children }: AppLayoutProps) {
   return (
     <>
       <PageHeader>
@@ -30,7 +29,7 @@ export default function AboutLayout({ children }: AppLayoutProps) {
         <PageHeaderDescription>{`${metadata.description}`}</PageHeaderDescription>
         <PageActions className="flex gap-2">
           <Link
-            href={"/contact"}
+            href={"/about"}
             className={cn(
               buttonVariants({
                 variant: "secondary",
@@ -39,11 +38,10 @@ export default function AboutLayout({ children }: AppLayoutProps) {
               ""
             )}
           >
-            <Ping color={"green-500"} />
-            Open to work
+            About me
           </Link>
           <Link
-            href={"/contact"}
+            href={"/about"}
             className={cn(
               buttonVariants({
                 variant: "secondary",
@@ -52,8 +50,7 @@ export default function AboutLayout({ children }: AppLayoutProps) {
               ""
             )}
           >
-            <CalendarPlus />
-            Schedule a call
+            Discover my projects
           </Link>
         </PageActions>
       </PageHeader>

@@ -9,20 +9,20 @@ import {
 } from "@workspace/ui/components/page-header";
 import Link from "next/link";
 import { buttonVariants } from "@workspace/ui/components/button";
-import { CalendarPlus, MessageCircle, Phone } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import { cn } from "@workspace/ui/lib/utils";
 import { Ping } from "@workspace/ui/components/ping";
 
 export const metadata: Metadata = {
-  title: "Who I Am",
-  description: "Learn about my journey, experiences, and what drives me.",
+  title: "Experiments",
+  description: "Projects, Mini App and other things i have built",
 };
 
 interface AppLayoutProps {
   children: React.ReactNode;
 }
 
-export default function AboutLayout({ children }: AppLayoutProps) {
+export default function ExperimentsLayout({ children }: AppLayoutProps) {
   return (
     <>
       <PageHeader>
@@ -43,7 +43,7 @@ export default function AboutLayout({ children }: AppLayoutProps) {
             Open to work
           </Link>
           <Link
-            href={"/contact"}
+            href={"/thought"}
             className={cn(
               buttonVariants({
                 variant: "secondary",
@@ -52,8 +52,7 @@ export default function AboutLayout({ children }: AppLayoutProps) {
               ""
             )}
           >
-            <CalendarPlus />
-            Schedule a call
+            Documents
           </Link>
         </PageActions>
       </PageHeader>
