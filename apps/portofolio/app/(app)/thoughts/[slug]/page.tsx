@@ -7,7 +7,6 @@ import {
   PageHeaderHeading,
   PageHeaderDescription,
 } from "@workspace/ui/components/page-header";
-import { NavLinks, NavWrapper } from "@/components/main-nav";
 import Link from "next/link";
 import { Button } from "@workspace/ui/components/button";
 import { ChevronLeft, UserPen } from "lucide-react";
@@ -44,7 +43,7 @@ export async function generateMetadata({ params }: { params: any }) {
       description,
       type: "article",
       publishedTime: formatDate(publishedTime, true),
-      url: `${siteConfig.url}/blog/${post.slug}`,
+      url: `${siteConfig.url}/thoughts/${post.slug}`,
       images: [{ url: ogImage }],
     },
     twitter: {
@@ -56,7 +55,7 @@ export async function generateMetadata({ params }: { params: any }) {
   };
 }
 
-export default async function Blog({ params }: { params: any }) {
+export default async function MDXPage({ params }: { params: any }) {
   const { slug } = await params;
   const post = getAllBlogPosts().find((post) => post.slug === slug);
 
@@ -81,7 +80,7 @@ export default async function Blog({ params }: { params: any }) {
               image: post.metadata.image
                 ? `${siteConfig.url}${post.metadata.image}`
                 : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-              url: `${siteConfig.url}/blog/${post.slug}`,
+              url: `${siteConfig.url}/thoughts/${post.slug}`,
               author: {
                 type: "Person",
                 name: siteConfig.name,
@@ -89,11 +88,9 @@ export default async function Blog({ params }: { params: any }) {
             }),
           }}
         />
-        <NavWrapper className="max-md:hidden top-16 border-t-0">
-          <NavLinks />
-        </NavWrapper>
-        <PageHeader className="border-b">
-          <PageHeaderHeading className="text-5xl mt-4">
+
+        <PageHeader className="">
+          <PageHeaderHeading className="">
             {post.metadata.title}
           </PageHeaderHeading>
           <PageHeaderDescription>{post.metadata.summary}</PageHeaderDescription>

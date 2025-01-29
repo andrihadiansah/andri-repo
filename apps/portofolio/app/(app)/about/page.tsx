@@ -55,7 +55,11 @@ export default function AboutPage() {
             </blockquote>
           </div>
         </div>
-        <div className="max-lg:hidden flex flex-col sticky gap-8 border text-2xl">
+        {/* -------- */}
+        <div
+          className="sticky top-[100px] h-[calc(100vh-132px)]
+        max-lg:hidden flex flex-col justify-center pl-8 gap-8 border text-2xl"
+        >
           <a href="#intro" className="hover:underline">
             intro
           </a>
@@ -63,7 +67,7 @@ export default function AboutPage() {
             work <br />
             experience
           </a>
-          <a href="#stack" className="hover:underline">
+          <a href="#tech" className="hover:underline">
             stack
           </a>
           <a href="#studies" className="hover:underline">
@@ -78,7 +82,8 @@ export default function AboutPage() {
         <div className="flex-1 max-lg:col-span-2 space-y-8">
           <section
             id="experience"
-            className="flex flex-col gap-4 pl-4 py-4 border-l"
+            className="scroll-mt-24
+            flex flex-col gap-4 pl-4 py-4 border-l"
           >
             <h2 className="text-xl font-bold border-b pb-2">Work Experience</h2>
             <div className="flex justify-between">
@@ -97,7 +102,11 @@ export default function AboutPage() {
             </div>
           </section>
           {/* -------- */}
-          <section id="tech" className="flex flex-col gap-4 pl-4 py-4 border-l">
+          <section
+            id="tech"
+            className="scroll-mt-24
+          flex flex-col gap-4 pl-4 py-4 border-l"
+          >
             <h2 className="text-xl font-bold border-b pb-2">
               Technical skills
             </h2>
@@ -127,7 +136,8 @@ export default function AboutPage() {
           {/* -------- */}
           <section
             id="studies"
-            className="flex flex-col gap-4 pl-4 py-4 border-l"
+            className="scroll-mt-24
+            flex flex-col gap-4 pl-4 py-4 border-l"
           >
             <h2 className="text-xl font-bold border-b pb-2">Studies</h2>
             <div className="flex justify-between">

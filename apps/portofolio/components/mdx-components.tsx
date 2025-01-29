@@ -1,5 +1,4 @@
 import type React from "react";
-import { JSX } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -17,61 +16,27 @@ type ImageProps = {
   alt: string;
 };
 
-const Heading = ({
-  level,
-  className,
-  children,
-}: {
-  level: 1 | 2 | 3 | 4 | 5 | 6;
-  className: string;
-  children: React.ReactNode;
-}) => {
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
-  return <Tag className={`scroll-m-20 ${className}`}>{children}</Tag>;
-};
-
 const components = {
   h1: (props: ChildrenProps) => (
-    <Heading
-      level={1}
-      className="text-4xl font-bold tracking-tight"
-      {...props}
-    />
+    <h1 className="text-4xl font-bold tracking-tight" {...props} />
   ),
   h2: (props: ChildrenProps) => (
-    <Heading
-      level={2}
+    <h2
       className="border-b pb-2 text-3xl font-semibold tracking-tight mt-6"
       {...props}
     />
   ),
   h3: (props: ChildrenProps) => (
-    <Heading
-      level={3}
-      className="text-2xl font-semibold tracking-tight mt-6"
-      {...props}
-    />
+    <h3 className="text-2xl font-semibold tracking-tight mt-6" {...props} />
   ),
   h4: (props: ChildrenProps) => (
-    <Heading
-      level={4}
-      className="text-xl font-semibold tracking-tight"
-      {...props}
-    />
+    <h4 className="text-xl font-semibold tracking-tight" {...props} />
   ),
   h5: (props: ChildrenProps) => (
-    <Heading
-      level={5}
-      className="text-lg font-semibold tracking-tight"
-      {...props}
-    />
+    <h5 className="text-lg font-semibold tracking-tight" {...props} />
   ),
   h6: (props: ChildrenProps) => (
-    <Heading
-      level={6}
-      className="text-base font-semibold tracking-tight"
-      {...props}
-    />
+    <h6 className="text-base font-semibold tracking-tight" {...props} />
   ),
   a: ({ href, children }: LinkProps) => (
     <Link

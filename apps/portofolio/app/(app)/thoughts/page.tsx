@@ -1,7 +1,6 @@
 // apps/portofolio/app/(app)/blog/page.tsx
 
 import type { Metadata } from "next";
-import { NavWrapper } from "@/components/main-nav";
 import {
   PageHeader,
   PageHeaderHeading,
@@ -33,7 +32,6 @@ export default function BlogPage() {
           </Link>
         </PageActions>
       </PageHeader>
-      <NavWrapper className="max-md:hidden border-t-0 top-16 z-50" />
       <section
         className="container-wrapper flex flex-col
         px-16 max-md:px-8 py-4  "

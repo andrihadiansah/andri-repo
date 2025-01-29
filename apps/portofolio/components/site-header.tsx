@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Icons } from "@workspace/ui/components/icons";
+import { DesktopNav } from "./main-nav";
 export default function SiteHeader() {
   return (
     <header className="border-grid border-b sticky top-0 z-50 w-full ">
@@ -13,6 +14,7 @@ export default function SiteHeader() {
           <Icons.gitHub className="h-8 w-8" />
           <span>Andri Hadiansah</span>
         </Link>
+        <DesktopNav />
       </nav>
     </header>
   );
