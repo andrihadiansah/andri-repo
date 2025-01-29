@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://andrihadiansah.vercel.app/gallery</loc><lastmod>2025-01-20T01:25:50.366Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andrihadiansah.vercel.app/thoughts</loc><lastmod>2025-01-20T01:25:50.367Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andrihadiansah.vercel.app</loc><lastmod>2025-01-20T01:25:50.367Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andrihadiansah.vercel.app/about</loc><lastmod>2025-01-20T01:25:50.367Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andrihadiansah.vercel.app/experiments/app-todolist</loc><lastmod>2025-01-20T01:25:50.367Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andrihadiansah.vercel.app/experiments</loc><lastmod>2025-01-20T01:25:50.367Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andrihadiansah.vercel.app/guestbook</loc><lastmod>2025-01-20T01:25:50.367Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andrihadiansah.vercel.app/contact</loc><lastmod>2025-01-20T01:25:50.367Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andrihadiansah.vercel.app/thoughts/front-end</loc><lastmod>2025-01-20T01:25:50.367Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andrihadiansah.vercel.app/thoughts/micro-fe</loc><lastmod>2025-01-20T01:25:50.367Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andrihadiansah.vercel.app/thoughts/stack</loc><lastmod>2025-01-20T01:25:50.367Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

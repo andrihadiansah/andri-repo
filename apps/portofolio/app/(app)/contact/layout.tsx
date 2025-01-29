@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import React from "react";
-import { NavWrapper, NavLinks } from "@/components/main-nav";
+import { NavWrapper } from "@/components/main-nav";
 import {
   PageHeader,
   PageHeaderHeading,
@@ -8,8 +8,8 @@ import {
   PageActions,
 } from "@workspace/ui/components/page-header";
 import Link from "next/link";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
-import { MessageCircle } from "lucide-react";
+import { buttonVariants } from "@workspace/ui/components/button";
+
 import { cn } from "@workspace/ui/lib/utils";
 
 export const metadata: Metadata = {
@@ -54,9 +54,7 @@ export default function ContactLayout({ children }: AppLayoutProps) {
           </Link>
         </PageActions>
       </PageHeader>
-      <NavWrapper className="max-md:hidden top-16 border-t-0 z-50">
-        <NavLinks />
-      </NavWrapper>
+      <NavWrapper className="max-md:hidden top-16 border-t-0 z-50" />
       <main
         className="container-wrapper border-grid flex flex-1 flex-col
       px-16 max-md:px-8 py-8"

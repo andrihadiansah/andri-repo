@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import React from "react";
-import { NavWrapper, NavLinks } from "@/components/main-nav";
+import { NavWrapper } from "@/components/main-nav";
 import {
   PageHeader,
   PageHeaderHeading,
@@ -57,12 +57,10 @@ export default function AboutLayout({ children }: AppLayoutProps) {
           </Link>
         </PageActions>
       </PageHeader>
-      <NavWrapper className="max-md:hidden top-16 border-t-0 z-50">
-        <NavLinks />
-      </NavWrapper>
+      <NavWrapper className="max-md:hidden top-16 border-t-0 z-50" />
       <main
         className="container-wrapper border-grid flex flex-1 flex-col
-      px-16 max-md:px-8 py-8"
+      px-16 max-md:px-8 py-8 gap-8 relative"
       >
         {children}
       </main>

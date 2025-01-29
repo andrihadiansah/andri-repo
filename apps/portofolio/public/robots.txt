@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://andrihadiansah.vercel.app
+
+# Sitemaps
+Sitemap: https://andrihadiansah.vercel.app/sitemap.xml

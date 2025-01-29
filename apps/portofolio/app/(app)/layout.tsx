@@ -11,9 +11,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
       <SiteHeader />
 
       <main className="min-h-[calc(100svh-180px)]">{children}</main>
-      <NavWrapper className="md:hidden bottom-0 z-50 border-b-0 border-t">
-        <NavLinks />
-      </NavWrapper>
+      <NavWrapper className="md:hidden bottom-0 z-50 border-b-0 border-t" />
       <SiteFooter />
     </div>
   );

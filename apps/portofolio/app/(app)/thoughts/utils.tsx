@@ -44,8 +44,8 @@ function getMDXData(dir: string) {
     const slug = path.basename(file, path.extname(file));
 
     return {
-      metadata,
       slug,
+      metadata,
       content,
     };
   });
