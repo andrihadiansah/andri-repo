@@ -10,7 +10,9 @@ export default function AppLayout({ children }: AppLayoutProps) {
     <div className="border-grid flex flex-1 flex-col">
       <SiteHeader />
 
-      <main className="min-h-[calc(100svh-180px)]">{children}</main>
+      <main className="min-h-[calc(100svh-132px)] flex flex-col flex-1">
+        {children}
+      </main>
       <MobileNav />
       <SiteFooter />
     </div>

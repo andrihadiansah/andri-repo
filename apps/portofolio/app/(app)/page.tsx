@@ -11,6 +11,7 @@ import { cn } from "@workspace/ui/lib/utils";
 import Link from "next/link";
 import { TimelineStory } from "@/components/time-story";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { BlogPosts } from "@/components/blog-posts";
 
 export default function HomePage() {
   return (
@@ -46,9 +47,9 @@ export default function HomePage() {
           </div>
           <div className="flex flex-col gap-3">
             <h2 className="text-2xl font-bold border-b pb-2">Latest Blog</h2>
-
+            <BlogPosts maxPosts={4} />
             <Link
-              href={"/thoughts"}
+              href={"/blog"}
               className={cn(
                 buttonVariants({ variant: "secondary", size: "sm" })
               )}
