@@ -57,10 +57,6 @@ function getMDXData(dir: any) {
   });
 }
 
-<<<<<<<< HEAD:apps/portofolio/app/(app)/blog/utils.tsx
-// Updated getBlogPosts to return a promise
-========
->>>>>>>> 7acec3681b60a771a7fb0d704bf4074d72ab3c85:apps/portofolio/app/(app)/blog/utils.ts
 export function getBlogPosts() {
   return getMDXData(path.join(process.cwd(), "contents", "blog"));
 }
