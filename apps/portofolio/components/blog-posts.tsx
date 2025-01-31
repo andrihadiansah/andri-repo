@@ -38,4 +38,8 @@ export function BlogPosts({ maxPosts, currentPage = 1 }: BlogPostsProps) {
       ))}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7acec3681b60a771a7fb0d704bf4074d72ab3c85

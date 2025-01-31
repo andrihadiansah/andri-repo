@@ -1,5 +1,4 @@
 import type React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
@@ -39,12 +38,12 @@ const components = {
     <h6 className="text-base font-semibold tracking-tight" {...props} />
   ),
   a: ({ href, children }: LinkProps) => (
-    <Link
+    <a
       href={href}
       className="font-medium text-primary underline underline-offset-4"
     >
       {children}
-    </Link>
+    </a>
   ),
   p: ({ children }: ChildrenProps) => (
     <p className="leading-7 mt-2">{children}</p>

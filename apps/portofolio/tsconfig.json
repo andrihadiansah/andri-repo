@@ -17,7 +17,9 @@
     "next.config.mjs",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "../../packages/ui/src/components/icons.tsx", "../../packages/ui/src/components/ping.tsx"  ],
+    ".next/types/**/*.ts",
+    "../../packages/ui/src/components/icons.tsx",
+    "../../packages/ui/src/components/ping.tsx"
+  ],
   "exclude": ["node_modules"]
 }
