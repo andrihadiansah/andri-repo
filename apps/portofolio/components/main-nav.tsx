@@ -15,7 +15,7 @@ const links: NavItem[] = [
   { href: "/experiments", label: "Experiments" },
   { href: "/about", label: "About Me" },
   { href: "/contact", label: "Contact" },
-  { href: "/thoughts", label: "Writing" },
+  { href: "/blog", label: "Blog" },
 ];
 
 const DesktopNav = () => {

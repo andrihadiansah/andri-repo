@@ -54,7 +54,7 @@ function getMDXData(dir: string) {
 }
 
 // Updated getBlogPosts to return a promise
-export function getAllBlogPosts() {
+export function getBlogPosts() {
   return getMDXData(path.join(process.cwd(), "contents", "blog"));
 }
 

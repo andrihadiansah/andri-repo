@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { formatDate, getAllBlogPosts } from "@/app/(app)/thoughts/utils";
+import { formatDate, getBlogPosts } from "@/app/(app)/blog/utils";
 import { siteConfig } from "@/config/site";
 import {
   PageActions,
@@ -13,13 +13,13 @@ import { ChevronLeft, UserPen } from "lucide-react";
 import { CustomMDX } from "@/components/mdx-components";
 
 export async function generateStaticParams() {
-  const posts = await getAllBlogPosts();
+  const posts = await getBlogPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: { params: any }) {
   const { slug } = await params;
-  const post = getAllBlogPosts().find((post) => post.slug === slug);
+  const post = getBlogPosts().find((post) => post.slug === slug);
 
   if (!post) {
     return null;
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: any }) {
       description,
       type: "article",
       publishedTime: formatDate(publishedTime, true),
-      url: `${siteConfig.url}/thoughts/${post.slug}`,
+      url: `${siteConfig.url}/blog/${post.slug}`,
       images: [{ url: ogImage }],
     },
     twitter: {
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: { params: any }) {
 
 export default async function MDXPage({ params }: { params: any }) {
   const { slug } = await params;
-  const post = getAllBlogPosts().find((post) => post.slug === slug);
+  const post = getBlogPosts().find((post) => post.slug === slug);
 
   if (!post) {
     notFound();
@@ -107,7 +107,7 @@ export default async function MDXPage({ params }: { params: any }) {
           <CustomMDX source={post.content} />
         </article>
         <div className="container-wrapper p-4 max-md:px-4 px-8">
-          <Link href={"/thoughts"}>
+          <Link href={"/blog"}>
             <Button variant={"outline"} withIcon={<ChevronLeft />}>
               All Posts
             </Button>
