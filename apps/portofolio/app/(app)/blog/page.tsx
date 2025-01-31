@@ -16,11 +16,13 @@ import {
 } from "@workspace/ui/components/pagination";
 import { getBlogPosts } from "./utils";
 
-export default function Page({
-  searchParams,
-}: {
-  searchParams: { page?: string };
-}) {
+export const dynamic = "force-dynamic";
+
+interface PageProps {
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default function Page({ searchParams }: PageProps) {
   const currentPage = Number(searchParams.page) || 1;
   const postsPerPage = 4;
   const allPosts = getBlogPosts();
