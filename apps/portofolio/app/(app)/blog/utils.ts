@@ -1,3 +1,5 @@
+//@ts-nocheck
+// inspired by https://github.com/vercel/examples/tree/main/solutions/blog/app/blog
 import fs from "fs";
 import path from "path";
 

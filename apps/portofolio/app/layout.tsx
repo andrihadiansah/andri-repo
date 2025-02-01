@@ -3,6 +3,7 @@ import { Providers } from "@/components/providers";
 import { fontSans, fontMono } from "@/lib/fonts";
 import type { Metadata } from "next";
 import { META_THEME_COLORS, siteConfig } from "@/config/site";
+import { Toaster } from "@workspace/ui/components/toaster";
 
 export const metadata: Metadata = {
   title: {
@@ -78,6 +79,7 @@ export default function RootLayout({
       >
         <Providers>
           <div className="relative flex flex-col flex-1">{children}</div>
+          <Toaster />
         </Providers>
       </body>
     </html>

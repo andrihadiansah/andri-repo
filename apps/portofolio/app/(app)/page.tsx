@@ -38,7 +38,7 @@ export default function HomePage() {
       </PageHeader>
 
       <main
-        className="container-wrapper border-border
+        className="container-wrapper min-h-screen
       px-16 max-md:px-8 py-8 flex flex-col gap-8"
       >
         <section className="gap-8 grid grid-cols-[60%_auto] max-lg:grid-cols-1 mt-4">

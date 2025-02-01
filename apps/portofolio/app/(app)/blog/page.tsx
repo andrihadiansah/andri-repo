@@ -15,9 +15,6 @@ import {
   PaginationPrevious,
 } from "@workspace/ui/components/pagination";
 import { getBlogPosts } from "./utils";
-import { PageConfig } from "next";
-
-export const dynamic = "force-dynamic";
 
 export default async function Page({
   searchParams,
@@ -30,7 +27,7 @@ export default async function Page({
   const params = await searchParams;
   const allPosts = getBlogPosts();
   const currentPage = Number(params.page) || 1;
-  const postsPerPage = 2; // Setting here
+  const postsPerPage = 3; // Adjust this number to show post per page numbers
   const totalPages = Math.ceil(allPosts.length / postsPerPage);
 
   // Function to generate pagination items
@@ -115,7 +112,7 @@ export default async function Page({
         </PageHeaderDescription>
         <PageActions>Happy Reading</PageActions>
       </PageHeader>
-      <article className="container-wrapper py-8 px-16 max-md:px-8">
+      <article className="container-wrapper min-h-[calc(100vh-410px)] max-md:min-h-[calc(100vh-480px)] py-8 px-16 max-md:px-8">
         <BlogPosts maxPosts={postsPerPage} currentPage={currentPage} />
       </article>
       <Pagination className="container-wrapper border-t py-4">
