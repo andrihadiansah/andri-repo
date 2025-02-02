@@ -38,9 +38,6 @@ const formSchema = z.object({
     message: "Message must be at least 10 characters.",
   }),
   phone: z.string().optional(),
-  agreement: z.boolean().refine((val) => val === true, {
-    message: "You must agree to the privacy policy.",
-  }),
 });
 
 export function ContactForm() {
@@ -52,7 +49,6 @@ export function ContactForm() {
       subject: "",
       description: "",
       phone: "",
-      agreement: false,
     },
   });
 
@@ -151,26 +147,6 @@ export function ContactForm() {
                 />
               </FormControl>
               <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        {/* AGREEMENT CHECKBOX */}
-        <FormField
-          control={form.control}
-          name="agreement"
-          render={({ field }) => (
-            <FormItem className="">
-              <FormControl>
-                <Checkbox
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
-              </FormControl>
-              <FormLabel className="pl-2">
-                I agree to the privacy policy
-              </FormLabel>
-              <FormMessage className="" />
             </FormItem>
           )}
         />
