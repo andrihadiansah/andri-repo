@@ -73,9 +73,6 @@ export function ContactForm() {
               <FormControl>
                 <Input placeholder="Fullname" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -147,7 +144,11 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
-                <Textarea placeholder="Type your message here..." {...field} />
+                <Textarea
+                  placeholder="Type your message here..."
+                  {...field}
+                  className="field-sizing-content"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
