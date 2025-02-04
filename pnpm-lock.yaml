@@ -91,6 +91,52 @@ importers:
         specifier: ^5.7.3
         version: 5.7.3
 
+  apps/projects/calendly-clone:
+    dependencies:
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../../packages/ui
+      lucide-react:
+        specifier: 0.474.0
+        version: 0.474.0(react@19.0.0)
+      next:
+        specifier: ^15.1.6
+        version: 15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      next-themes:
+        specifier: ^0.4.4
+        version: 0.4.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+    devDependencies:
+      '@types/node':
+        specifier: ^22.13.0
+        version: 22.13.0
+      '@types/react':
+        specifier: 19.0.8
+        version: 19.0.8
+      '@types/react-dom':
+        specifier: 19.0.3
+        version: 19.0.3(@types/react@19.0.8)
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../../../packages/eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../../../packages/typescript-config
+      postcss:
+        specifier: ^8.5.1
+        version: 8.5.1
+      tailwindcss:
+        specifier: ^4.0.3
+        version: 4.0.3
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
   packages/eslint-config:
     devDependencies:
       '@next/eslint-plugin-next':
