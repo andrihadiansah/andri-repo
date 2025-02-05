@@ -92,6 +92,7 @@ importers:
         version: 5.7.3
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   apps/projects/calandri:
     dependencies:
       '@radix-ui/react-checkbox':
@@ -165,6 +166,8 @@ importers:
         specifier: 5.7.2
         version: 5.7.2
 
+=======
+>>>>>>> c5975cc7fec15ff26a69335a3bf07a7b2eae4bef
 =======
 >>>>>>> c5975cc7fec15ff26a69335a3bf07a7b2eae4bef
   apps/projects/calendly-clone:
