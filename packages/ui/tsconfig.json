@@ -7,6 +7,6 @@
       "@workspace/ui/*": ["./src/*"]
     }
   },
-  "include": ["."],
+  "include": [".", "../../apps/portofolio/lib/fonts.ts"],
   "exclude": ["node_modules", "dist"]
 }
