@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
   keywords: [
-    "Andri",
-    "Andri Hadiansah",
-    "Portofolio Andri Hadiansah",
+    "Calendly",
+    "Next.js",
+    "Google Calendar",
     "Next.js",
     "Turborepo",
     "shadcn/ui",
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: siteConfig.name,
-      url: siteConfig.url,
+      name: siteConfig.author,
+      url: siteConfig.authorUrl,
     },
   ],
-  creator: siteConfig.name,
+  creator: siteConfig.author,
   openGraph: {
     type: "website",
     locale: "en_US",

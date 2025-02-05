@@ -55,7 +55,7 @@ export default function ContactLayout({ children }: AppLayoutProps) {
       </PageHeader>
       <main
         className="container-wrapper border-grid flex flex-1 flex-col
-      px-16 max-md:px-8 py-8"
+      px-16 max-md:px-8 py-8 gap-4"
       >
         {children}
       </main>
