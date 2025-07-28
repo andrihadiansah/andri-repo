@@ -4,6 +4,7 @@ import { fontSans, fontMono } from "@/lib/fonts";
 import type { Metadata } from "next";
 import { META_THEME_COLORS, siteConfig } from "@/config/site";
 import { Toaster } from "@workspace/ui/components/toaster";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
@@ -81,6 +82,7 @@ export default function RootLayout({
           <div className="relative flex flex-col flex-1">{children}</div>
           <Toaster />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
