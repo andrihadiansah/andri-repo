@@ -41,13 +41,16 @@ const formSchema = z.object({
     .string()
     .min(10, { message: "Message must be at least 10 characters." }),
   dateTime: z.object({
-    date: z.date({ required_error: "Please select a date." }),
+    date: z.date({ message: "Please select a date." }),
     time: z.object({
-      hour: z.string(),
-      minute: z.string(),
+      hour: z.string().min(1, { message: "Please select an hour." }),
+      minute: z.string().min(1, { message: "Please select a minute." }),
     }),
   }),
-  timezone: z.string().default("UTC"),
+  timezone: z
+    .string()
+    .min(1, { message: "Please select a timezone." })
+    .default("WIB"),
   phoneNumber: z
     .object({
       countryCode: z.string().optional(),
@@ -55,6 +58,9 @@ const formSchema = z.object({
     })
     .optional(),
 });
+
+type ContactFormInput = z.input<typeof formSchema>;
+type ContactFormOutput = z.output<typeof formSchema>;
 
 const countryCodes = [
   { value: "+1", label: "US(+1)" },
@@ -102,7 +108,7 @@ function formatTime(hour: string, minute: string): string {
 }
 
 export function ContactForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<ContactFormInput, unknown, ContactFormOutput>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullname: "",
@@ -117,7 +123,7 @@ export function ContactForm() {
     },
   });
   // WhatsApp
-  function onSubmit(data: z.infer<typeof formSchema>) {
+  function onSubmit(data: ContactFormOutput) {
     const { dateTime, timezone, fullname, email, message, phoneNumber } = data;
     const phoneNumberToSend = "6285155318841";
     const formattedDateTime = `${formatTime(dateTime.time.hour, dateTime.time.minute)}, ${formatDate(dateTime.date)} (${timezone})`;
