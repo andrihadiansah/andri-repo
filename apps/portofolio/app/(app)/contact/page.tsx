@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <>
       <section>
-        <ContactForm />
+        {/* <ContactForm /> */}
       </section>
       <Separator />
       <section>
