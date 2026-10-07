@@ -10,7 +10,6 @@ import {
 import { cn } from "@workspace/ui/lib/utils";
 import Link from "next/link";
 import { TimelineStory } from "@/components/time-story";
-import { Instagram, Linkedin, Twitter } from "lucide-react";
 import { BlogPosts } from "@/components/blog-posts";
 
 export default function HomePage() {
@@ -75,9 +74,6 @@ export default function HomePage() {
           <h3 className="text-xl">Find me on</h3>
           <div className="flex gap-2">
             <Icons.gitHub className="h-8" />
-            <Linkedin size={36} />
-            <Instagram size={36} />
-            <Twitter size={36} />
           </div>
         </section>
       </main>
